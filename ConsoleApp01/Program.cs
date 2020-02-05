@@ -14,7 +14,7 @@ class calcR
 
     /**
      * Calculate the Rotation matrix from A->B: B = R*A
-     */
+     */ 
     public static Matrix<double> CalcRotation(Matrix<double> A, Matrix<double> B)
     {
         
@@ -89,73 +89,6 @@ class calcR
     }
 
     //----------------------------------------------------------------------------------------------------------------
-
-    //public static Tuple<List<Point2d>, List<Point2d>> RansacMethod(List<Point2d> kp1, List<Point2d> kp2) {
-
-    //    var betterkp1 = new List<Point2d>();
-    //    var betterkp2 = new List<Point2d>();
-    //    var betterkpTuple = new Tuple<List<Point2d>, List<Point2d>>(betterkp1, betterkp2);
-
-    //    int maxNumberOfInlier = 4;
-    //    double k = 1000.0f;
-    //    double w = 0.70f;
-    //    double p = 0.99f;
-    //    int num = 10;
-    //    double max_err = 0; // threshold to judge whether other points are inliners or not
-
-    //    //iteration
-    //    int iteration = 0;
-    //    while (iteration < k)
-    //    {
-    //        var maybeInlier1 = new List<Point2d>();
-    //        var maybeInlier2 = new List<Point2d>();
-    //        var alsoInlier1 = new List<Point2d>();
-    //        var alsoInlier2 = new List<Point2d>();
-
-    //        //random select four pair of points
-    //        var random = new Random();
-    //        for (int i = 0; i < num; i++)
-    //        {
-    //            int index = random.Next(kp1.Count);
-    //            maybeInlier1.Add(kp1[index]);
-    //            maybeInlier2.Add(kp2[index]);
-    //        }
-
-    //        //calculate model(homography) by using the random select points 
-    //        var H = FindHomography(maybeInlier1, maybeInlier2);
-
-    //        //calculate the data, if it fits the model, add it to alsoInlier.
-    //        for (int i=0; i<num; i++) {
-    //            double err = CalculateDistance(kp1[i], kp2[i], H);
-    //            if(err > max_err) {
-    //                max_err = err;
-    //            }
-    //        }
-    //        Console.WriteLine("err is " + max_err);
-    //        for (int i = 0; i < kp1.Count; ++i) {
-    //            double err = CalculateDistance(kp1[i], kp2[i], H);
-    //            if (err < max_err) {
-    //                alsoInlier1.Add(kp1[i]);
-    //                alsoInlier2.Add(kp2[i]);
-    //            }
-    //        }
-
-    //        // end if We founnd enough number of inlier.
-    //        if (alsoInlier1.Count >= maxNumberOfInlier) {
-    //            maxNumberOfInlier = alsoInlier1.Count;
-    //            betterkp1 = alsoInlier1;
-    //            betterkp2 = alsoInlier2;
-    //        }
-
-    //        //k is dymatic.
-    //        double inlierProb = maxNumberOfInlier / kp1.Count;
-    //        if (inlierProb > w) w = inlierProb;
-    //        k = Math.Log(1 - p) / Math.Log(1 - Math.Pow(w, 4));
-    //        iteration++;
-    //    }
-    //    return betterkpTuple;
-    //}
-
 
 
     public static Tuple<List<Point2d>, List<Point2d>> RansacMethod(List<Point2d> kp1, List<Point2d> kp2) {
@@ -276,8 +209,8 @@ class calcR
         //Mat src = new Mat("/Users/feiran-l/Desktop/ConsoleApp01/1.jpeg", ImreadModes.Grayscale);
         //Mat dst = new Mat("/Users/feiran-l/Desktop/ConsoleApp01/2.jpeg", ImreadModes.Grayscale);
 
-        Mat src = new Mat("/Users/yanjiao-a/Desktop/ransactest/1.jpeg");
-        Mat dst = new Mat("/Users/yanjiao-a/Desktop/ransactest/2.jpeg");
+        Mat src = new Mat("/Users/yanjiao-a/Desktop/ransac/1.jpg");
+        Mat dst = new Mat("/Users/yanjiao-a/Desktop/ransac/2.jpg");
 
         //Compress the original image
         //var rSrc = new Mat();
@@ -341,7 +274,7 @@ class calcR
         var bestTuple = RansacMethod(betterKp1_tmp, betterKp2_tmp);
 
         // test homography
-        // var H = FindHomography(betterKp1_tmp, betterKp2_tmp);
+        
         var H = FindHomography(bestTuple.Item1, bestTuple.Item2);
         Mat H_mat = new Mat(new Size(3, 3), MatType.CV_64FC1);
         for (int i = 0; i < 3; i++)
@@ -362,7 +295,7 @@ class calcR
         dst.CopyTo(tmp2);
         Cv2.ImShow("plot", plot_img);
         Cv2.WaitKey();
-        Cv2.ImWrite("/Users/yanjiao-a/Desktop/ransactest/ret.png", plot_img);
+        Cv2.ImWrite("/Users/yanjiao-a/Desktop/ransac/ret.png", plot_img);
         //-------------------------------------
 
     }

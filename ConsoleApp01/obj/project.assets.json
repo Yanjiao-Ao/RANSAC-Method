@@ -54,6 +54,71 @@
           "lib/netcoreapp2.1/OpenCvSharp.dll": {}
         }
       },
+      "OpenCvSharp4.runtime.uwp/4.2.0.20200108": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-arm/native/OpenCvSharpExtern.dll": {
+            "assetType": "native",
+            "rid": "win-arm"
+          },
+          "runtimes/win-arm/native/opencv_img_hash420.dll": {
+            "assetType": "native",
+            "rid": "win-arm"
+          },
+          "runtimes/win-arm/native/opencv_world420.dll": {
+            "assetType": "native",
+            "rid": "win-arm"
+          },
+          "runtimes/win-x64/native/OpenCvSharpExtern.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/opencv_img_hash420.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/opencv_world420.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/OpenCvSharpExtern.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/opencv_img_hash420.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/opencv_world420.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "OpenCvSharp4.runtime.win/4.2.0.20200108": {
+        "type": "package",
+        "build": {
+          "build/netcoreapp/OpenCvSharp4.runtime.win.props": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/OpenCvSharpExtern.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/opencv_videoio_ffmpeg420_64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/OpenCvSharpExtern.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/opencv_videoio_ffmpeg420.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
       "System.Drawing.Common/4.6.0": {
         "type": "package",
         "dependencies": {
@@ -198,6 +263,44 @@
         "opencvsharp4.nuspec"
       ]
     },
+    "OpenCvSharp4.runtime.uwp/4.2.0.20200108": {
+      "sha512": "2IKOc2ZaAyPXWjfxC49Y6mjWZBVDhJhbeBP70/6AhEWwcOnAANswCwalLAl/hD9vKxAVd059rM555tgs20EbuQ==",
+      "type": "package",
+      "path": "opencvsharp4.runtime.uwp/4.2.0.20200108",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "opencvsharp4.runtime.uwp.4.2.0.20200108.nupkg.sha512",
+        "opencvsharp4.runtime.uwp.nuspec",
+        "runtimes/win-arm/native/OpenCvSharpExtern.dll",
+        "runtimes/win-arm/native/opencv_img_hash420.dll",
+        "runtimes/win-arm/native/opencv_world420.dll",
+        "runtimes/win-x64/native/OpenCvSharpExtern.dll",
+        "runtimes/win-x64/native/opencv_img_hash420.dll",
+        "runtimes/win-x64/native/opencv_world420.dll",
+        "runtimes/win-x86/native/OpenCvSharpExtern.dll",
+        "runtimes/win-x86/native/opencv_img_hash420.dll",
+        "runtimes/win-x86/native/opencv_world420.dll"
+      ]
+    },
+    "OpenCvSharp4.runtime.win/4.2.0.20200108": {
+      "sha512": "YcnmgJRystrV6kDA+maKJ/fWsAmpT9FoijfbcfQCuKW4ttmLiiBfn4Uz582TLgOTQrANOII42nyB5jJ6J92Z7Q==",
+      "type": "package",
+      "path": "opencvsharp4.runtime.win/4.2.0.20200108",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net/OpenCvSharp4.runtime.win.props",
+        "build/netcoreapp/OpenCvSharp4.runtime.win.props",
+        "build/netstandard/OpenCvSharp4.runtime.win.props",
+        "opencvsharp4.runtime.win.4.2.0.20200108.nupkg.sha512",
+        "opencvsharp4.runtime.win.nuspec",
+        "runtimes/win-x64/native/OpenCvSharpExtern.dll",
+        "runtimes/win-x64/native/opencv_videoio_ffmpeg420_64.dll",
+        "runtimes/win-x86/native/OpenCvSharpExtern.dll",
+        "runtimes/win-x86/native/opencv_videoio_ffmpeg420.dll"
+      ]
+    },
     "System.Drawing.Common/4.6.0": {
       "sha512": "2A3spjjoPZnvpVh/sDTzd+0H8ZqTdr+hH/6obB8MMfG81EJ85PmxCKDBxhBVQiA25PliKAZ1sKogDcq9mSnFEA==",
       "type": "package",
@@ -241,7 +344,9 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "MathNet.Numerics >= 4.9.0",
-      "OpenCvSharp4 >= 4.2.0.20200108"
+      "OpenCvSharp4 >= 4.2.0.20200108",
+      "OpenCvSharp4.runtime.uwp >= 4.2.0.20200108",
+      "OpenCvSharp4.runtime.win >= 4.2.0.20200108"
     ]
   },
   "packageFolders": {
@@ -250,11 +355,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/yanjiao-a/Documents/RANSAC/ConsoleApp01/ConsoleApp01.csproj",
+      "projectUniqueName": "/Users/yanjiao-a/Desktop/ransac/ConsoleApp01/ConsoleApp01.csproj",
       "projectName": "ConsoleApp01",
-      "projectPath": "/Users/yanjiao-a/Documents/RANSAC/ConsoleApp01/ConsoleApp01.csproj",
+      "projectPath": "/Users/yanjiao-a/Desktop/ransac/ConsoleApp01/ConsoleApp01.csproj",
       "packagesPath": "/Users/yanjiao-a/.nuget/packages/",
-      "outputPath": "/Users/yanjiao-a/Documents/RANSAC/ConsoleApp01/obj/",
+      "outputPath": "/Users/yanjiao-a/Desktop/ransac/ConsoleApp01/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/yanjiao-a/.config/NuGet/NuGet.Config"
@@ -284,6 +389,14 @@
             "version": "[4.9.0, )"
           },
           "OpenCvSharp4": {
+            "target": "Package",
+            "version": "[4.2.0.20200108, )"
+          },
+          "OpenCvSharp4.runtime.uwp": {
+            "target": "Package",
+            "version": "[4.2.0.20200108, )"
+          },
+          "OpenCvSharp4.runtime.win": {
             "target": "Package",
             "version": "[4.2.0.20200108, )"
           }
