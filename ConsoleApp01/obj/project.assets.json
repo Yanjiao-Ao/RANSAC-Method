@@ -1,0 +1,307 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "MathNet.Numerics/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MathNet.Numerics.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.Win32.SystemEvents/4.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "OpenCvSharp4/4.2.0.20200108": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "4.6.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/OpenCvSharp.Blob.dll": {},
+          "lib/netcoreapp2.1/OpenCvSharp.Extensions.dll": {},
+          "lib/netcoreapp2.1/OpenCvSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/OpenCvSharp.Blob.dll": {},
+          "lib/netcoreapp2.1/OpenCvSharp.Extensions.dll": {},
+          "lib/netcoreapp2.1/OpenCvSharp.dll": {}
+        }
+      },
+      "System.Drawing.Common/4.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0",
+          "Microsoft.Win32.SystemEvents": "4.6.0"
+        },
+        "compile": {
+          "ref/netcoreapp3.0/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Drawing.Common.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MathNet.Numerics/4.9.0": {
+      "sha512": "4cYzhuMDq57oC6lwhMmuigdhP+oywmp1bMtFzvzz4wYr5eWbg0JLDPo/L1juqDkIBj+rc3FrxUEX7jcHRmnF+w==",
+      "type": "package",
+      "path": "mathnet.numerics/4.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/MathNet.Numerics.dll",
+        "lib/net40/MathNet.Numerics.xml",
+        "lib/net461/MathNet.Numerics.dll",
+        "lib/net461/MathNet.Numerics.xml",
+        "lib/netstandard1.3/MathNet.Numerics.dll",
+        "lib/netstandard1.3/MathNet.Numerics.xml",
+        "lib/netstandard2.0/MathNet.Numerics.dll",
+        "lib/netstandard2.0/MathNet.Numerics.xml",
+        "mathnet.numerics.4.9.0.nupkg.sha512",
+        "mathnet.numerics.nuspec"
+      ]
+    },
+    "Microsoft.NETCore.Platforms/3.0.0": {
+      "sha512": "TsETIgVJb/AKoYfSP+iCxkuly5d3inZjTdx/ItZLk2CxY85v8083OBS3uai84kK3/baLnS5/b5XGs6zR7SuuHQ==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.3.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Win32.SystemEvents/4.6.0": {
+      "sha512": "Edg+pFW5C8WJb680Za2kTV8TqUi6Ahl/WldRVoOVJ23UQLpDHFspa+umgFjkWZw24ETsU99Cg+ErZz683M4chg==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Win32.SystemEvents.dll",
+        "lib/net461/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.4.6.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "ref/net461/Microsoft.Win32.SystemEvents.dll",
+        "ref/net461/Microsoft.Win32.SystemEvents.xml",
+        "ref/net472/Microsoft.Win32.SystemEvents.dll",
+        "ref/net472/Microsoft.Win32.SystemEvents.xml",
+        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "OpenCvSharp4/4.2.0.20200108": {
+      "sha512": "3jVwr1fC3kUBp8WkkfpBvqVakwuC4A166EWj4B5UedDkgjouHYHOH8Uoh11oM/F+QRDibrKFshxq/qW+Y4sI4A==",
+      "type": "package",
+      "path": "opencvsharp4/4.2.0.20200108",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/OpenCvSharp.Blob.dll",
+        "lib/net40/OpenCvSharp.Blob.pdb",
+        "lib/net40/OpenCvSharp.Blob.xml",
+        "lib/net40/OpenCvSharp.Extensions.dll",
+        "lib/net40/OpenCvSharp.Extensions.pdb",
+        "lib/net40/OpenCvSharp.Extensions.xml",
+        "lib/net40/OpenCvSharp.UserInterface.dll",
+        "lib/net40/OpenCvSharp.UserInterface.pdb",
+        "lib/net40/OpenCvSharp.UserInterface.xml",
+        "lib/net40/OpenCvSharp.dll",
+        "lib/net40/OpenCvSharp.pdb",
+        "lib/net40/OpenCvSharp.xml",
+        "lib/net461/OpenCvSharp.Blob.dll",
+        "lib/net461/OpenCvSharp.Blob.pdb",
+        "lib/net461/OpenCvSharp.Blob.xml",
+        "lib/net461/OpenCvSharp.Extensions.dll",
+        "lib/net461/OpenCvSharp.Extensions.pdb",
+        "lib/net461/OpenCvSharp.Extensions.xml",
+        "lib/net461/OpenCvSharp.UserInterface.dll",
+        "lib/net461/OpenCvSharp.UserInterface.pdb",
+        "lib/net461/OpenCvSharp.UserInterface.xml",
+        "lib/net461/OpenCvSharp.dll",
+        "lib/net461/OpenCvSharp.pdb",
+        "lib/net461/OpenCvSharp.xml",
+        "lib/netcoreapp2.1/OpenCvSharp.Blob.dll",
+        "lib/netcoreapp2.1/OpenCvSharp.Blob.pdb",
+        "lib/netcoreapp2.1/OpenCvSharp.Blob.xml",
+        "lib/netcoreapp2.1/OpenCvSharp.Extensions.dll",
+        "lib/netcoreapp2.1/OpenCvSharp.Extensions.pdb",
+        "lib/netcoreapp2.1/OpenCvSharp.Extensions.xml",
+        "lib/netcoreapp2.1/OpenCvSharp.dll",
+        "lib/netcoreapp2.1/OpenCvSharp.pdb",
+        "lib/netcoreapp2.1/OpenCvSharp.xml",
+        "lib/netstandard2.0/OpenCvSharp.Blob.dll",
+        "lib/netstandard2.0/OpenCvSharp.Blob.pdb",
+        "lib/netstandard2.0/OpenCvSharp.Blob.xml",
+        "lib/netstandard2.0/OpenCvSharp.Extensions.dll",
+        "lib/netstandard2.0/OpenCvSharp.Extensions.pdb",
+        "lib/netstandard2.0/OpenCvSharp.Extensions.xml",
+        "lib/netstandard2.0/OpenCvSharp.dll",
+        "lib/netstandard2.0/OpenCvSharp.pdb",
+        "lib/netstandard2.0/OpenCvSharp.xml",
+        "opencvsharp4.4.2.0.20200108.nupkg.sha512",
+        "opencvsharp4.nuspec"
+      ]
+    },
+    "System.Drawing.Common/4.6.0": {
+      "sha512": "2A3spjjoPZnvpVh/sDTzd+0H8ZqTdr+hH/6obB8MMfG81EJ85PmxCKDBxhBVQiA25PliKAZ1sKogDcq9mSnFEA==",
+      "type": "package",
+      "path": "system.drawing.common/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.xml",
+        "ref/netstandard2.0/System.Drawing.Common.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "system.drawing.common.4.6.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "MathNet.Numerics >= 4.9.0",
+      "OpenCvSharp4 >= 4.2.0.20200108"
+    ]
+  },
+  "packageFolders": {
+    "/Users/yanjiao-a/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/yanjiao-a/Documents/RANSAC/ConsoleApp01/ConsoleApp01.csproj",
+      "projectName": "ConsoleApp01",
+      "projectPath": "/Users/yanjiao-a/Documents/RANSAC/ConsoleApp01/ConsoleApp01.csproj",
+      "packagesPath": "/Users/yanjiao-a/.nuget/packages/",
+      "outputPath": "/Users/yanjiao-a/Documents/RANSAC/ConsoleApp01/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/yanjiao-a/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "dependencies": {
+          "MathNet.Numerics": {
+            "target": "Package",
+            "version": "[4.9.0, )"
+          },
+          "OpenCvSharp4": {
+            "target": "Package",
+            "version": "[4.2.0.20200108, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": [
+          "Microsoft.NETCore.App"
+        ]
+      }
+    }
+  }
+}

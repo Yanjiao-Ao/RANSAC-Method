@@ -276,8 +276,8 @@ class calcR
         //Mat src = new Mat("/Users/feiran-l/Desktop/ConsoleApp01/1.jpeg", ImreadModes.Grayscale);
         //Mat dst = new Mat("/Users/feiran-l/Desktop/ConsoleApp01/2.jpeg", ImreadModes.Grayscale);
 
-        Mat src = new Mat("/Users/feiran-l/Desktop/ConsoleApp01/1.jpeg");
-        Mat dst = new Mat("/Users/feiran-l/Desktop/ConsoleApp01/2.jpeg");
+        Mat src = new Mat("/Users/yanjiao-a/Desktop/ransactest/1.jpeg");
+        Mat dst = new Mat("/Users/yanjiao-a/Desktop/ransactest/2.jpeg");
 
         //Compress the original image
         //var rSrc = new Mat();
@@ -317,7 +317,7 @@ class calcR
         var betterMatches = new List<DMatch>();
         foreach (DMatch[] items in matches)
         {
-            if (items[0].Distance < 0.8 * items[1].Distance)
+            if (items[0].Distance < 0.75 * items[1].Distance)
             {
                 betterKp1.Add(kp1[items[0].QueryIdx].Pt);
                 betterKp2.Add(kp2[items[0].TrainIdx].Pt);
@@ -339,7 +339,6 @@ class calcR
         //-------------------------------------
         // use my RANSAC to calculate
         var bestTuple = RansacMethod(betterKp1_tmp, betterKp2_tmp);
-        Console.WriteLine(bestTuple.Item1.Count);
 
         // test homography
         // var H = FindHomography(betterKp1_tmp, betterKp2_tmp);
@@ -363,7 +362,7 @@ class calcR
         dst.CopyTo(tmp2);
         Cv2.ImShow("plot", plot_img);
         Cv2.WaitKey();
-        Cv2.ImWrite("/Users/feiran-l/Desktop/ConsoleApp01/ret.png", plot_img);
+        Cv2.ImWrite("/Users/yanjiao-a/Desktop/ransactest/ret.png", plot_img);
         //-------------------------------------
 
     }

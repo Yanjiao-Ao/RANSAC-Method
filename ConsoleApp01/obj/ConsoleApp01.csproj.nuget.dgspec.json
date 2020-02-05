@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/yanjiao-a/Documents/RANSAC/ConsoleApp01/ConsoleApp01.csproj": {}
+  },
+  "projects": {
+    "/Users/yanjiao-a/Documents/RANSAC/ConsoleApp01/ConsoleApp01.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yanjiao-a/Documents/RANSAC/ConsoleApp01/ConsoleApp01.csproj",
+        "projectName": "ConsoleApp01",
+        "projectPath": "/Users/yanjiao-a/Documents/RANSAC/ConsoleApp01/ConsoleApp01.csproj",
+        "packagesPath": "/Users/yanjiao-a/.nuget/packages/",
+        "outputPath": "/Users/yanjiao-a/Documents/RANSAC/ConsoleApp01/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yanjiao-a/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "MathNet.Numerics": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            },
+            "OpenCvSharp4": {
+              "target": "Package",
+              "version": "[4.2.0.20200108, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": [
+            "Microsoft.NETCore.App"
+          ]
+        }
+      }
+    }
+  }
+}
